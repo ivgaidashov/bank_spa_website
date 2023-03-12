@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.widthUniversal {
+    @apply 2xl:w-[1280px] xl:w-[1024px] lg:w-[768px] md:w-[640px] sm:w-[480px] mx-auto;
+  }
+
+.arrowAstyle {
+    @apply text-[#64A6D0] md:scale-[200%] scale-[150%] cursor-pointer hover:bg-[#64A6D0] hover:text-white hover:md:scale-[250%] hover:scale-[160%] rounded-full transition-all duration-200 ease-in;
+}
+
+.flexCenter {
+    @apply flex justify-center items-center;
+}
+
+.blueGradient {
+    @apply bg-gradient-to-r from-[#64A6D0] to-[#0077B6];
+}
