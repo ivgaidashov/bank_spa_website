@@ -11,8 +11,6 @@ const SubsectionNav = ({section, allLinks, breakpoint}) => {
   
   const [windowSize, setWindowSize] = useState(getWindowSize());
 
-
-
   function getWindowSize() {
     let innerWidth, innerHeigh;
 
@@ -27,13 +25,8 @@ const SubsectionNav = ({section, allLinks, breakpoint}) => {
 
     
   }
-
-
   
   useEffect(() => {
-        
-
-
     function handleWindowResize() {
       setWindowSize(getWindowSize());
     }
@@ -45,7 +38,7 @@ const SubsectionNav = ({section, allLinks, breakpoint}) => {
     };
   }, []);
 
-  const [mainLinks, hiddenLinks] = dynamicNavbar(allLinks, innerWidth, breakpoint);
+  const [mainLinks, hiddenLinks] = dynamicNavbar(allLinks, innerWidth == "undefined" ? 1444 : innerWidth, breakpoint);
   
   return (
     <div className='flex items-center mt-7 mx-4 sm:mx-0 w-full'>
