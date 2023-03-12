@@ -11,9 +11,11 @@ const SubsectionNav = ({section, allLinks, breakpoint}) => {
   
   const [windowSize, setWindowSize] = useState(getWindowSize());
 
+
+
   function getWindowSize() {
-    let innerWidth = 1444;
-    let innerHeight = 799;
+    innerWidth = 1444;
+    innerHeight = 799;
 
     if (typeof window !== "undefined" )
     {
@@ -22,8 +24,13 @@ const SubsectionNav = ({section, allLinks, breakpoint}) => {
 
     return {innerWidth, innerHeight};
   }
+
+
   
   useEffect(() => {
+        
+  let innerWidth;
+  let innerHeight;
     function handleWindowResize() {
       setWindowSize(getWindowSize());
     }
