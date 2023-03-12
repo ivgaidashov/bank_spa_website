@@ -12,9 +12,8 @@ const SubsectionNav = ({section, allLinks, breakpoint}) => {
   const [windowSize, setWindowSize] = useState(getWindowSize());
 
   function getWindowSize() {
-    console.log(window)
+    const {innerWidth, innerHeight} = typeof window == "undefined" ?  {innerWidth: 1444, innerHeight: 799} : window;
 
-    const {innerWidth, innerHeight} = typeof window !== "undefined" ?  {innerWidth: 1444, innerHeight: 799} : window;
     return {innerWidth, innerHeight};
   }
   
