@@ -38,7 +38,7 @@ const SubsectionNav = ({section, allLinks, breakpoint}) => {
     };
   }, []);
 
-  const [mainLinks, hiddenLinks] = dynamicNavbar(allLinks, innerWidth == "undefined" ? 1444 : innerWidth, breakpoint);
+  const [mainLinks, hiddenLinks] = dynamicNavbar(allLinks, typeof innerWidth == "undefined" ? 1444 : innerWidth, breakpoint);
   
   return (
     <div className='flex items-center mt-7 mx-4 sm:mx-0 w-full'>
